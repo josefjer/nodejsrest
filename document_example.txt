@@ -1,0 +1,3 @@
+﻿Restart Oracle database after installation of patch#25.
+Restart Unicode app after installation of patch#25.
+Restart Microsoft app  after installation of patch#25.
