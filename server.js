@@ -1,4 +1,6 @@
-﻿const express = require('express');
+﻿//Restfull application for parsing data from binary input
+
+const express = require('express');
 const app = express();
 
 let counter = 0;
@@ -15,8 +17,10 @@ app.use((req, res, next) => {
   });
 });
 
+//returns count of calls
 app.get('/count', (req, res) => res.send('Api calls: '+counter));
 
+//returns parsed text
 app.post('/file', (req, res) => {
   console.log('Input:');
   console.log(req.rawBody);
@@ -40,7 +44,7 @@ app.post('/file', (req, res) => {
 
 var port = process.env.PORT || 3000;
 
-
+// settings needed for script to be working on Heroku 
 app.listen(port, "0.0.0.0", function() {
 console.log("Listening on Port 3000");
 });
